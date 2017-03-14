@@ -1,0 +1,1 @@
+/Users/atte/.zprezto/runcoms/zshrc

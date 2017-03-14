@@ -1,0 +1,38 @@
+#
+# Executes commands at the start of an interactive session.
+#
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/texbin:$PATH"
+
+# Fix tmux formatting bug
+export TERM="screen-256color-bce"
+
+# Enforce vim as an editor and shell key binding
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# z for autojumping
+. ~/z.sh
+
+# Use oh-my-zsh style key binding for git status
+alias gss=gws
+
+# Node version manager (assumes that it's already installed)
+export NVM_DIR="/Users/atte/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+eval $(thefuck --alias)
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export ANDROID_SDK_ROOT=/Users/atte/Library/Android/sdk
+export NDK_ROOT=/Users/atte/Library/Android/sdk/ndk-bundle
+
+# Command for managing the dotfile repository
+alias dotfiles-git='/usr/bin/git --git-dir=/Users/atte/.cfg/ --work-tree=/Users/atte'
