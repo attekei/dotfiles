@@ -1,1 +1,6 @@
+set surround
 nmap <Space> :action SearchEverywhere<CR>
+nmap <-> :action CommentByLineComment<CR>
+nmap <C--> :action CommentByBlockComment<CR>
+:nnoremap K i<CR><Esc>
+
