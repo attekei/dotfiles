@@ -1,0 +1,4 @@
+# Log of modifications I've done to the my standard OSX installation
+
+# Increase the dock show delay so that practically dock is permanently hidden
+defaults write com.apple.Dock autohide-delay -float 30 && killall Dock
